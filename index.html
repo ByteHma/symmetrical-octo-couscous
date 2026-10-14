@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Information about ByteHma's personal rclone Google Drive backup connector, its limited access, and privacy practices.">
+  <title>ByteHma · Personal Drive Backup</title>
+  <link rel="stylesheet" href="./assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="ByteHma backup homepage"><span class="brand-mark" aria-hidden="true">B<span>·</span></span><span>BYTEHMA <small>/ PERSONAL TOOLS</small></span></a>
+      <nav aria-label="Main navigation"><a aria-current="page" href="./">Overview</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a></nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> PERSONAL BACKUP CONNECTOR <span class="eyebrow-divider">/</span> INFORMATION SITE</div>
+        <h1 id="hero-title">Keep your data.<br><span class="accent">Control the access.</span></h1>
+        <p class="hero-description">This page documents a personal Google Drive OAuth connection used by <strong>ByteHma</strong> with <a href="https://rclone.org/" rel="noopener noreferrer">rclone</a> to transfer and recover workstation backup files. The backup tools run locally—not on this website.</p>
+        <div class="actions"><a class="button primary" href="./privacy.html">Read the privacy policy <span aria-hidden="true">↗</span></a><a class="button secondary" href="#how-it-works">How it works <span aria-hidden="true">↓</span></a></div>
+      </section>
+      <section class="metric-grid" aria-label="At a glance">
+        <article class="metric"><p class="metric-label">GOOGLE DRIVE SCOPE</p><p class="metric-value"><code>drive.file</code></p><p class="metric-detail">Restricted to files the authorized application creates or is granted access to.</p></article>
+        <article class="metric"><p class="metric-label">EXECUTION</p><p class="metric-value">Local device</p><p class="metric-detail">Transfers and recovery run through the owner's configured desktop tools.</p></article>
+        <article class="metric"><p class="metric-label">WEBSITE</p><p class="metric-value">Information only</p><p class="metric-detail">No sign-in, tracking scripts, or backup upload form on this site.</p></article>
+      </section>
+      <section class="section two-column" id="how-it-works" aria-labelledby="how-title">
+        <div class="section-intro"><p class="section-kicker">01 / WORKFLOW</p><h2 id="how-title">A straightforward path from local files to recovery.</h2><p>This OAuth client gives the owner's rclone installation limited access to Google Drive. The public site does not handle that authorization or store files.</p></div>
+        <ol class="steps">
+          <li><span class="step-index">01</span><div><h3>Authorize locally</h3><p>The owner grants permission in Google's authorization flow. The resulting credentials remain in the local rclone configuration, not this repository.</p></div></li>
+          <li><span class="step-index">02</span><div><h3>Transfer backup files</h3><p>Local backup tools prepare files for transfer. In the established DFKB workflow, the archive is encrypted before uploading to Drive.</p></div></li>
+          <li><span class="step-index">03</span><div><h3>Verify and restore</h3><p>The owner can check stored files, download authorized backup objects, and validate restored data using local tools.</p></div></li>
+        </ol>
+      </section>
+      <section class="section separation" aria-labelledby="access-title"><p class="section-kicker">02 / DATA BOUNDARY</p><h2 id="access-title">Limited access. No public accounts.</h2><div class="info-grid"><div><h3>What is accessed</h3><p>Files and associated metadata available through the authorized <code>drive.file</code> scope, as needed for backup uploads, checks, and restores.</p></div><div><h3>What is not collected here</h3><p>This static website has no Google sign-in, file upload interface, analytics code, or application database. GitHub may process basic hosting request information under its own policies.</p></div><div><h3>Who it is for</h3><p>Personal use by the account owner. There is no public backup service or subscription.</p></div><div><h3>How to stop access</h3><p>Google Account permissions can be reviewed or revoked at any time. Deleting backups is a separate action under the owner's control.</p></div></div></section>
+      <section class="notice" aria-labelledby="notice-title"><div><p class="section-kicker">TRANSPARENCY</p><h2 id="notice-title">Read how Google data is handled.</h2><p>The privacy policy explains access, storage, sharing, retention, and revocation for the personal backup workflow.</p></div><a class="button secondary" href="./privacy.html">View privacy policy <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer"><span>© 2026 ByteHma · Personal Drive Backup</span><div><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="https://github.com/ByteHma/symmetrical-octo-couscous" rel="noopener noreferrer">Source on GitHub ↗</a></div><p>Independent personal utility · Not affiliated with Google or rclone.</p></footer>
+  </div>
+</body>
+</html>
